@@ -24,11 +24,19 @@ app.use('/cart',cart)
 app.use('/address',address)
 
 const PORT = process.env.PORT ||5000;
-
+var count=1500
 app.get('/',(req,res)=>{
-  res.send(` <h1> Developed by S and D Shah<h1>
+  count++
+  res.send(` <h1> Developed by S and D Shah</h1> 
+<h1>
+Visitor:${count}
+</h1>
   <a href='https://www.linkedin.com/in/naseeb-khan-deenshah/'> Linkedin<a>
-  `)
+  <p>Get Product  details  use</p>
+  <a href='https://serverside-five.vercel.app/product'>https://serverside-five.vercel.app/product</a>
+  <p class="cp-text">
+    © Copyright 2022 S and D shah. All rights reserved.
+</p>`)
 })
 
 
