@@ -4,20 +4,22 @@ var user= require('./routes/user')
 var cart= require('./routes/cart')
 var address= require('./routes/add')
 var dotenv=require('dotenv')
+let cors = require("cors");
+
 var mangoose = require('mongoose')
 const { json } = require('express')
 dotenv.config({ path: './.env' });
 var key =process.env.URL_Database
-console.log(key)
 mangoose.connect(key,{
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  })
-  .then(() => {
-    console.log("MongoDB Connected…")
-  })
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => {
+  console.log("MongoDB Connected…")
+})
 var app = express()
 app.use(json())
+app.use(cors());
 app.use('/user',user)
 app.use('/product',product)
 app.use('/cart',cart)
@@ -35,12 +37,18 @@ Visitor:${count}
   <p>Get Product  details  use</p>
   <a href='https://serverside-five.vercel.app/product'>https://serverside-five.vercel.app/product</a>
   <p class="cp-text">
-    © Copyright 2022 S and D shah. All rights reserved.
+  <p> Searh Using product  group</p>
+  <a href='https://serverside-five.vercel.app/product/cat?cat=makeup'>https://serverside-five.vercel.app/product/cat?cat=makeup</a>
+  
+    
+  <br />
+  © Copyright 2022 <a href='https://www.linkedin.com/in/sanjanasinghh/'>S</a> and 
+    <a href='https://www.linkedin.com/in/naseeb-khan-deenshah/'> D<a> Shah. All rights reserved.
 </p>`)
 })
 
 
-
+app.get('*')
 
 
 

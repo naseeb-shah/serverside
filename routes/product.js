@@ -5,7 +5,7 @@ var count =999
  var produtmodel=require("../models/Product_model")
 
 
-
+ 
  router.get('/',(req,res)=>{
 count++
    produtmodel.find((err,response)=>{
@@ -16,6 +16,19 @@ count++
    })
    //  res.send("this user get route")
  })
+ router.get('/cat',(req,res)=>{
+   const catg=req.query.cat
+   console.log(catg)
+   count++
+      produtmodel.find({cat:catg},(err,response)=>{
+         if(err)
+         res.send(err)
+         else
+         res.send({data:response,total_product:response.length,total_request:count})
+      })
+      //  res.send("this user get route")
+    })
+   
 
  router.post('/add',(req,res)=>{
 
