@@ -38,7 +38,7 @@ Visitor:${count}
   <a href='https://serverside-five.vercel.app/product'>https://serverside-five.vercel.app/product</a>
   <p class="cp-text">
   <p> Searh Using product  group</p>
-  <a href='https://serverside-five.vercel.app/product/cat?cat=makeup'>https://serverside-five.vercel.app/product/cat?cat=makeup</a>
+  <a href='https://serverside-five.vercel.app/product/q?cat=makeup'>https://serverside-five.vercel.app/product/q?cat=makeup</a>
   
     
   <br />

@@ -16,11 +16,11 @@ count++
    })
    //  res.send("this user get route")
  })
- router.get('/cat',(req,res)=>{
-   const catg=req.query.cat
+ router.get('/q',(req,res)=>{
+   const catg=req.query
    console.log(catg)
    count++
-      produtmodel.find({cat:catg},(err,response)=>{
+      produtmodel.find(catg,(err,response)=>{
          if(err)
          res.send(err)
          else
