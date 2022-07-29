@@ -5,7 +5,7 @@ var cart = require('./routes/cart')
 var address = require('./routes/add')
 var dotenv = require('dotenv')
 let cors = require("cors");
-var count_Model = require("./models/count_Model")
+
 
 
 var mangoose = require('mongoose')

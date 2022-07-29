@@ -2,7 +2,7 @@ const { response } = require('express')
 const express= require('express')
 
  var router=express.Router()
-
+ var produtmodel=require("../models/Product_model")
  
 
 
