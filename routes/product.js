@@ -23,16 +23,32 @@ produtmodel.find((err,response)=>{
  })
  router.get('/q',(req,res)=>{
    const catg=req.query
-   console.log(catg)
-   count++
+   
       produtmodel.find(catg,(err,response)=>{
          if(err)
          res.send(err)
          else
-         res.send({data:response,total_product:response.length,total_request:count})
+         res.send({data:response,total_product:response.length})
       })
       //  res.send("this user get route")
     })
+   
+    
+    router.get('/search/:name',(req,res)=>{
+      const na=req.params.name
+      console.log(na)
+
+      
+         produtmodel.find({name:{$regex:na,$options:"$i"}},(err,response)=>{
+            if(err)
+            res.send(err)
+            else
+            res.send({data:response,total_product:response.length})
+         })
+         //  res.send("this user get route")
+       })
+
+
    
 
  router.post('/add',(req,res)=>{

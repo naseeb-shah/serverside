@@ -36,23 +36,23 @@ var sai={
 app.get('/', (req, res) => {
 
 sai.count+=1
+res.sendFile(__dirname + '/index.html');
 
-
-  res.send(` <h1> Developed by S and D Shah</h1> 
-<h1>
-Today Total Request:${sai.count}
-</h1>
-  <a href='https://www.linkedin.com/in/naseeb-khan-deenshah/'> Linkedin<a>
-  <p>Get Product  details  use</p>
-  <a href='https://serverside-five.vercel.app/product'>https://serverside-five.vercel.app/product</a>
-  <p class="cp-text">
-  <p> Searh  Product Category Men,Women,Electronics And Makeup  </p>
-  <a href='https://serverside-five.vercel.app/product/q?cat=makeup'>https://serverside-five.vercel.app/product/q?cat=Category_Name</a>
+//   res.send(` <h1> Developed by S and D Shah</h1> 
+// <h1>
+// Today Total Request:
+// </h1>
+//   <a href='https://www.linkedin.com/in/naseeb-khan-deenshah/'> Linkedin<a>
+//   <p>Get Product  details  use</p>
+//   <a href='https://serverside-five.vercel.app/product'>https://serverside-five.vercel.app/product</a>
+//   <p class="cp-text">
+//   <p> Searh  Product Category Men,Women,Electronics And Makeup  </p>
+//   <a href='https://serverside-five.vercel.app/product/q?cat=makeup'>https://serverside-five.vercel.app/product/q?cat=Category_Name</a>
   
     
-  <br />
-  © Copyright 2022 <a href='https://www.linkedin.com/in/sanjanasinghh/'>Sanjana Kumari Singh</a>  S_&_D Shah. All rights reserved.
-</p>`)
+//   <br />
+//   © Copyright 2022 <a href='https://www.linkedin.com/in/sanjanasinghh/'>Sanjana Kumari Singh</a>  S_&_D Shah. All rights reserved.
+// </p>`)
 })
 
 
