@@ -1,18 +1,23 @@
 const { response } = require('express')
 const express= require('express')
-var count =999
- var router=express.Router()
- var produtmodel=require("../models/Product_model")
 
+ var router=express.Router()
 
  
+
+
+   
+ 
  router.get('/',(req,res)=>{
-count++
-   produtmodel.find((err,response)=>{
+
+
+
+
+produtmodel.find((err,response)=>{
       if(err)
       res.send(err)
       else
-      res.send({data:response,total_product:response.length,total_request:count})
+      res.send({data:response,total_product:response.length,})
    })
    //  res.send("this user get route")
  })
