@@ -29,7 +29,7 @@ addroute.get('/:id', (req, res) => {
 })
 
 
-addroute.post('/add/:id', (req, res) => {
+addroute.post('/:id', (req, res) => {
      
      try {
           var id = req.params.id
@@ -56,8 +56,11 @@ addroute.post('/add/:id', (req, res) => {
                               if(err){
                                    res.send(err)
                               }
-                              else{
+                              else if(d){
                                    res.send(d.add)
+                              }
+                              else{
+                                  res.send("Not Found")
                               }
                          })
                     }
