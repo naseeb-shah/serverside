@@ -73,7 +73,7 @@ router.post('/add', (req, res) => {
 
 // login
 
-router.get('/login', ((req, res) => {
+router.post('/login', ((req, res) => {
    try {
       var x = req.body
 
