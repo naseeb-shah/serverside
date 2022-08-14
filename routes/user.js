@@ -83,7 +83,9 @@ router.post('/login', ((req, res) => {
          else if(response)
             res.send(response)
          else
-         res.send("user Not found")
+         res.send({
+         username:" User not Exist "
+         })
       })
 
 
