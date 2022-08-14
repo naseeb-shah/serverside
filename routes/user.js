@@ -55,7 +55,7 @@ router.post('/add', (req, res) => {
          if (err)
             res.send(response)
          else
-            res.send(response.id)
+            res.send(response)
       })
 
 
